@@ -1,0 +1,190 @@
+
+*{
+    overflow-x:hidden;
+    padding:0;
+    margin:0;
+
+
+}
+
+
+.index_main_grid_div {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 90vw;
+    margin: auto;
+}
+
+.Index_content_Inside_index_grid {
+    display: flex;
+    flex-direction: column;
+}
+
+.enroll_inside_content_index {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 3.5em;
+    text-align: center;
+    margin: 2vh auto;
+}
+
+.Internhub_inside_context_index {
+    font-size: 1.6em;
+    color: #754FFE;
+}
+
+
+.Index_image_Inside_index_grid img {
+    margin-left: 10%;
+}
+
+.lastline_content_index {
+    font-size: 1.5em !important;
+}
+
+.data-show_content_index {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4vw;
+    margin: 8vh auto;
+}
+
+.students_overall_content_index {
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
+}
+
+.number_students_overall_content_index {
+    font-size: 2em;
+    font-weight: 600;
+}
+
+.name_students_overall_content_index {
+    font-size: 1.2em;
+    font-weight: 400;
+}
+
+.title_internship_types_area {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4em;
+    width: 60vw;
+    margin: auto;
+}
+
+.internship_types_area {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 80vw;
+    margin: 4vh auto;
+    gap: 4vh;
+}
+
+.internship_card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid gray;
+    padding: 3vh 3vw;
+    margin: auto;
+    border-radius: 10px;
+    background-color: rgb(241, 239, 235);
+    height: 65vh;
+}
+
+    .internship_card a {
+        text-decoration: none;
+        color: white;
+        font-size: 1em;
+        background-color: #754FFE;
+        padding: 6px 13px;
+        border: none;
+        border-radius: 5px;
+    }
+
+    .internship_card p {
+        font-size: 1.1em;
+        overflow-y: hidden;
+        height: 30%;
+    }
+
+    .internship_card div button {
+        background-color: rgb(208, 188, 188);
+        border: none;
+        border-radius: 5px;
+        padding: 5px;
+        margin: 3px;
+    }
+
+
+
+ /*   Sign Up*/
+
+
+.signup_page_grid_overall {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 90vw;
+    margin: auto;
+}
+
+
+.photo_signup_page_grid_overall{
+    padding:12vh 0px;
+}
+
+
+
+.div_form_signup form {
+    width: 70%;
+    margin: 15vh auto;
+}
+
+.div_form_signup h1 {
+    margin: 3vh 1vw;
+    font-size: 3em;
+}
+
+.form_fields {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: end;
+    gap: 3vh;
+    font-family: 'Inter', sans-serif;
+    margin: auto;
+}
+
+.fields {
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
+    font-size: 1.4em;
+    width: 100%;
+}
+
+    .fields input {
+        padding: 15px 20px;
+        width: 70%;
+        border: none;
+        border: none;
+        border-radius: 8px;
+        background-color: rgb(230, 224, 224);
+    }
+
+.form_submit_div {
+    margin: 5vh 9vw;
+}
+
+    .form_submit_div button {
+        color: white;
+        font-size: 1.2em;
+        background-color: #754FFE;
+        padding: 7px 16px;
+        border: none;
+        border-radius: 5px;
+    }

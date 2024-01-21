@@ -1,0 +1,246 @@
+﻿
+@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> signInManager
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Internshub</title>
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Internshub.styles.css" asp-append-version="true" />
+    <style>
+        body {
+            font-family: 'Acherus', sans-serif;
+        }
+
+
+        .atag_login_signup_nav_bar2 {
+            text-decoration: none;
+            color: white;
+            font-size: 1em;
+            background-color: #754FFE;
+            padding: 6px 13px;
+            border: none;
+            border-radius: 5px;
+        }
+
+       
+
+        .logout-btn {
+            font-family: 'Arial', sans-serif;
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            text-decoration: none;
+        }
+
+            .logout-btn:hover {
+                background-color: #45a049;
+            }
+
+        .accounts_section_nav_bar2_my_account a {
+            text-decoration: none;
+            font-size: 1em;
+        }
+    </style>
+
+</head>
+<body>
+    <header>
+
+
+
+        <div class="nav_bar1">
+
+
+            <div class="nav_bar1_contact">
+                <div class="div_inside_contact_nav_bar1">
+                    <img src="/Images/phone-call_4213179.png " width="20" alt="">
+                    <a href="">+91 919191919191</a>
+                </div>
+                <div class="div_inside_contact_nav_bar1">
+                    <img src="/Images/chat_724683.png" width="18" alt="">
+                    <a href=""> internshubservices@gmail.com</a>
+                </div>
+            </div>
+
+            <div class="social_media_language_nav_bar1">
+
+                <div class="social_media_nav_bar1">
+                    <img src="/Images/facebook_2111392.png" width="20" alt="">
+                    <img src="/Images/Twitter_logo.png" width="20" alt="">
+                </div>
+                <div class="language_nav_bar1">
+
+                    <select name="" id="" class="select_language_nav_bar1">
+
+                        <Option>English</Option>
+
+
+                    </select>
+
+                </div>
+
+            </div>
+        </div>
+
+
+        <div class="line"></div>
+
+
+
+        <nav class="nav_bar2">
+            <div class="title_search_nav_bar2">
+                <div class="title_search_nav_bar2_ist">
+                    <a asp-controller="Home" asp-action="Index"> <img src="~/images/Internhub_logo_new_wala _blue.png" width="160" alt="Internshub"></a>
+                </div>
+                <div class="title_search_nav_bar2_second">
+                    <img src="~/images/dropdown_menu_of_courese_internhub.png" alt="">
+                    <a href="">courses</a>
+                    <div class="hide_coures_nav_bar2">
+                        <img src="/Images/dropdown_menu_of_courese_internhub_black.jpg" width="25" alt="">
+                        <a href="">All courses</a>
+                    </div>
+                </div>
+                <div class="title_search_nav_bar2_third">
+                    <img src="./Images/Search_icon_black.png" width="40">
+                    <!-- <form method="post">
+                      <input type="text" placeholder="Search" >
+                    </form> -->
+                </div>
+
+
+            </div>
+
+            <div class="accounts_section_nav_bar2">
+               @if(signInManager.IsSignedIn(User))
+                {
+                    <div class="accounts_section_nav_bar2_my_account">
+                        <a asp-controller="Accounts" asp-action="Profile"> <img src="/Images/account-icon-24.jpg" width="35" alt=""></a>
+                        <a asp-controller="Accounts" asp-action="Profile">My Profile</a>
+
+                    </div>
+                }
+                else
+                {
+                    <div class="accounts_section_nav_bar2_my_account">
+                        <a asp-controller="Accounts" asp-action="Login"> <img src="/Images/account-icon-24.jpg" width="35" alt=""></a>
+                        <a asp-controller="Accounts" asp-action="Login">My Profile</a>
+
+                    </div>
+                }
+
+
+                @if(signInManager.IsSignedIn(User))
+                {
+                    <a class="logout-btn" asp-area="" asp-controller="Accounts" asp-action="Logout">Logout</a>
+                    if (User.IsInRole("Admin"))
+                    {
+                        <a class="atag_login_signup_nav_bar2" asp-controller="List_Page" asp-action="Create_List">Create</a>
+                        <a class="atag_login_signup_nav_bar2" asp-controller="List_Page" asp-action="List">List</a>
+                    }
+                }
+                else
+                {
+                    <div class="accounts_section_nav_bar2_login_join">
+                        <a class="atag_login_signup_nav_bar2"asp-controller="Accounts" asp-action="Login">Login</a>
+                        <a class="atag_login_signup_nav_bar2" asp-controller="Accounts" asp-action="Signup">Join Now</a>
+                    </div>
+                }
+
+
+
+            </div>
+
+
+        </nav>
+
+
+
+
+
+    </header>
+    <div class="containe">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <!--  Footer  -->
+
+
+    <footer>
+
+        <div class="footer_overall_grid">
+
+            <div class="sec1_footer_overall_grid">
+
+                <div class="title_footer_overall_grid">
+                    <img src="./Images/Internhub_logo_new_wala _blue.png" width="200" alt="">
+                </div>
+                <div class="content_sec1_footer_overall_grid">
+
+                    Internshub Platform provides Various technical and non-technical, engineering, Business Internships,
+                    and Courses to All Graduates and Jobseekers with Domain/Technical Experts on Demand Courses, anytime
+                    Online/Offline/ Digital Platforms. Explore thousands of courses and Training along with internships
+                    for the lowest price ever!
+
+                </div>
+                <div class="newsletter_footer">
+                    <h2>Subscribe to our newsletter</h2>
+                    <input type="email" name="" id="" placeholder="Enter your email here">
+                    <button type="submit">Subscribe</button>
+                </div>
+
+            </div>
+
+            <div class="sec2_footer_overall_grid">
+
+                <h2>Top categories</h2>
+            </div>
+
+            <div class="sec3_footer_overall_grid">
+
+                <h2>Useful links</h2>
+                <ul>
+                    <li><a href="">Become an instructor</a></li>
+                    <li><a href="">Blog</a></li>
+                    <li><a href="">All Coursed</a></li>
+                    <li><a href="">Sign up</a></li>
+                </ul>
+            </div>
+            <div class="sec4_footer_overall_grid">
+
+                <h2>Help</h2>
+                <ul>
+                    <li><a href="">Contact Us</a></li>
+                    <li><a href="">About Us</a></li>
+                    <li><a href="">Privacy Policy</a></li>
+                    <li><a href="">Terms & Conditions</a></li>
+                    <li><a href="">Faq</a></li>
+                    <li><a href="">Refund Policy</a></li>
+
+                </ul>
+            </div>
+
+
+
+
+
+
+        </div>
+
+
+
+    </footer>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

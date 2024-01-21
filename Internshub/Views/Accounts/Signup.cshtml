@@ -1,0 +1,54 @@
+﻿
+@model Internshub.Models.Users
+
+
+
+
+<div class="signup_page_grid_overall">
+
+    <div class="photo_signup_page_grid_overall">
+        <img src="~/images/Internship_photo_signup.webp" width="600" alt="">
+    </div>
+    <div class="div_form_signup">
+
+        <form method="post">
+
+            <h1>Signup!</h1>
+
+
+            <div class="form_fields">
+
+                <div class="fields">
+                    <label for="username">Username</label>
+                    <input type="text" name="username" placeholder="Enter your Username" asp-for="username" id="username" required>
+                </div>
+
+                <div class="fields">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" asp-for="email" placeholder="Enter Your Email" id="email" required>
+                </div>
+
+
+                <div class="fields">
+                    <label for="password">Password</label>
+                    <input type="password" name="password" asp-for="password" placeholder="Enter your Password" id="password" required>
+                </div>
+
+
+
+            </div>
+
+            <div class="form_submit_div">
+                <button type="submit">Signup</button>
+            </div>
+
+
+
+
+
+        </form>
+
+    </div>
+
+</div>
+

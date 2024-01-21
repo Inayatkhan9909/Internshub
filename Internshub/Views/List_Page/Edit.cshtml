@@ -1,0 +1,99 @@
+﻿@model Internshub.Models.Intern
+
+<style>
+    form {
+        width: 60vw;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .head_signup {
+        text-align: center;
+        margin: 2vh 0px;
+    }
+
+    .form_fields {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1.5vh;
+    }
+
+    .fields {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.4em;
+    }
+
+        .fields input {
+            border-radius: 5px;
+            padding: 7px 25px;
+            width: 130%;
+        }
+
+    .form_submit_div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 15px auto;
+    }
+
+        .form_submit_div button {
+            font-size: 1.2em;
+            padding: 7px 15px;
+            border-radius: 7px;
+            border: none;
+            background-color: rgba(232, 119, 34, 1);
+        }
+
+</style>
+
+
+
+<form method="post">
+    <div class="head_signup">
+        <h1>Update Intern</h1>
+    </div>
+
+
+    <div class="form_fields">
+
+        <div class="fields">
+            <label for="id">ID</label>
+            <input type="text" name="id" id="id" asp-for="Id" disabled>
+        </div>
+        <div class="fields">
+            <label for="Name">Full Name</label>
+            <input type="text" name="Name" id="Name" asp-for="Name">
+        </div>
+
+        <div class="fields">
+            <label for="Email">Email</label>
+            <input type="Email" name="Email" id="Email" asp-for="Email">
+        </div>
+
+        <div class="fields">
+            <label for="Phone">Phone</label>
+            <input type="number" name="Phone" id="Phone" asp-for="Phone">
+        </div>
+
+        <div class="fields">
+            <label for="address">Address</label>
+            <input type="text" name="address" id="address" asp-for="Address">
+        </div>
+
+
+
+
+
+    </div>
+
+    <div class="form_submit_div">
+        <button type="submit">Update</button>
+    </div>
+
+</form>

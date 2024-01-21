@@ -1,0 +1,73 @@
+﻿
+@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> signInManager
+
+@{
+    ViewData["Title"] = "Secure Index";
+    Layout = "~/Views/Shared/_Layout.cshtml"; // Use your layout file
+}
+
+
+    <style>
+
+      .contain{
+         margin-bottom:5vh;
+        }
+        h1 {
+            color: #333;
+        font-family: 'Arial', sans-serif;
+        }
+
+        p {
+            color: #666;
+        font-family: 'Arial', sans-serif;
+        }
+
+        .logout-btn {
+        font-family: 'Arial', sans-serif;
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            text-decoration:none;
+        }
+
+       .logout-btn:hover 
+       {
+                background-color: #45a049;
+       }
+    </style>
+
+
+
+@if (signInManager.IsSignedIn(User))
+{
+  
+
+
+        <div class="contain">
+            <h1>Welcome to the Secure Area!</h1>
+            <p>This is the secure content that only authenticated users can see.</p>
+         <a class="logout-btn" asp-area="" asp-controller="Accounts" asp-action="Logout">Logout</a>
+              
+          
+        </div>
+
+
+}
+else
+{
+    <div class="contain">
+        <h1>Welcome to the Secure Area!</h1>
+        <p>You are not logged in please login to continue</p>
+        <a class="logout-btn" asp-area="" asp-controller="Accounts" asp-action="Login">Login</a>
+
+
+    </div>
+}
+
+
+
