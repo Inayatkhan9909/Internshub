@@ -1,6 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Identity;
 using Internshub.Data;
+using Internshub.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,12 +12,21 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<RegistrationDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("MainDbConnection")));
 
-builder.Services.AddDbContext<AuthDbContext>(options =>
+builder.Services.AddDbContext<ApplicationDbContext>(options =>
 options.UseSqlServer(builder.Configuration.GetConnectionString("AuthDbConnection")));
 
-builder.Services.AddIdentity<IdentityUser, IdentityRole>()
-    .AddEntityFrameworkStores<AuthDbContext>()
+//builder.Services.AddIdentity<IdentityUser, IdentityRole>()
+//    .AddEntityFrameworkStores<AuthDbContext>()
+//    .AddDefaultTokenProviders();
+
+
+    builder.Services.AddIdentity<ApplicationUser, IdentityRole>()
+    .AddEntityFrameworkStores<ApplicationDbContext>()
     .AddDefaultTokenProviders();
+
+
+
+
 
 
 //builder.Services.AddDbContext<AuthDbContext>(options =>

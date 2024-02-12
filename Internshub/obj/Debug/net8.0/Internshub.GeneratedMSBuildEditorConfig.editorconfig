@@ -18,6 +18,18 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\inaya\OneDrive\Desktop\asp web app\Internshub\Internshub
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/inaya/OneDrive/Desktop/asp web app/Internshub/Internshub/Views/Accounts/CompleteProfile.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudHNcQ29tcGxldGVQcm9maWxlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/inaya/OneDrive/Desktop/asp web app/Internshub/Internshub/Views/Accounts/DeleteAccount.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudHNcRGVsZXRlQWNjb3VudC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/inaya/OneDrive/Desktop/asp web app/Internshub/Internshub/Views/Accounts/EditProfile.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudHNcRWRpdFByb2ZpbGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/inaya/OneDrive/Desktop/asp web app/Internshub/Internshub/Views/Accounts/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudHNcTG9naW4uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -34,16 +46,20 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudHNcU2lnbnVwLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/inaya/OneDrive/Desktop/asp web app/Internshub/Internshub/Views/Home/Catagory.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDYXRhZ29yeS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/inaya/OneDrive/Desktop/asp web app/Internshub/Internshub/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/inaya/OneDrive/Desktop/asp web app/Internshub/Internshub/Views/Home/Privacy.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+[C:/Users/inaya/OneDrive/Desktop/asp web app/Internshub/Internshub/Views/Home/Jobs.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxKb2JzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/inaya/OneDrive/Desktop/asp web app/Internshub/Internshub/Views/Home/SecureIndex.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTZWN1cmVJbmRleC5jc2h0bWw=
+[C:/Users/inaya/OneDrive/Desktop/asp web app/Internshub/Internshub/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/inaya/OneDrive/Desktop/asp web app/Internshub/Internshub/Views/List_Page/Create_List.cshtml]

@@ -1,0 +1,87 @@
+﻿
+@model Internshub.Models.Users
+
+
+           
+<style>
+    .delete_confirm_btn {
+        display: inline-block;
+        background-color: rgb(197, 21, 21);
+        color: #fff;
+        padding: 10px 15px;
+        text-decoration: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 14px;
+        border: none;
+        margin: 1vh 1vw;
+    }
+
+    .cancel_delete_btn {
+        background-color: rgb(136, 133, 133);
+    }
+
+
+
+    .delete_confirm_btn:hover {
+        background-color: rgb(236, 41, 41);
+    }
+
+    .cancel_delete_btn:hover {
+        background-color: rgb(177, 172, 172);
+    }
+
+    .delete_confirm_btn:focus {
+        outline: none;
+    }
+</style>
+
+<h1>Delete Intern</h1>
+
+<table class="table">
+
+    <tr>
+        <th>Name</th>
+        <td>@Model.FirstName @Model.LastName</td>
+
+    </tr>
+
+    <tr>
+        <th>Username</th>
+        <td>@Model.username</td>
+
+    </tr>
+
+    <tr>
+        <th>Email</th>
+        <td>@Model.email</td>
+
+    </tr>
+
+
+</table>
+
+
+
+
+<form   method="post" class="form_delete_conform">
+    <div class="row mb-3">
+
+        <div >
+            <input type="text" class="form-control" name="username" value="@Model.username" id="username" hidden>
+        </div>
+    </div>
+    <div class="confirm_delete_password">
+        <div class="">
+            <h6 class="mb-0"> Password</h6>
+        </div>
+        <div class="">
+            <input type="text" class="form-control" placeholder="Enter your Password" name="password" id="password">
+        </div>
+    </div>
+
+    <p>Are you sure you want to delete the intern with the following Intern? </p>
+    <button type ="submit" delete" class="delete_confirm_btn">Delete</button>
+    <a asp-action="List" class="cancel_delete_btn delete_confirm_btn"> Cancel  </a>
+
+</form>

@@ -135,3 +135,4 @@ C:\Users\inaya\OneDrive\Desktop\asp web app\Internshub\Internshub\bin\Debug\net8
 C:\Users\inaya\OneDrive\Desktop\asp web app\Internshub\Internshub\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
 C:\Users\inaya\OneDrive\Desktop\asp web app\Internshub\Internshub\obj\Debug\net8.0\Internshub.csproj.AssemblyReference.cache
 C:\Users\inaya\OneDrive\Desktop\asp web app\Internshub\Internshub\obj\Debug\net8.0\Internshub.csproj.CopyComplete
+C:\Users\inaya\OneDrive\Desktop\asp web app\Internshub\Internshub\obj\Debug\net8.0\Internshub.sourcelink.json

@@ -1,23 +1,43 @@
-﻿
+﻿@using Internshub.Models;
 @using Microsoft.AspNetCore.Identity
-@inject SignInManager<IdentityUser> signInManager
+@inject UserManager<ApplicationUser> usermanager
+@inject SignInManager<ApplicationUser> signInManager
 
 
 <!DOCTYPE html>
 <html lang="en">
+  
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - Internshub</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/Internshub.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/StyleSheet.css" asp-append-version="true" />
     <style>
-        body {
-            font-family: 'Acherus', sans-serif;
+      
+        .accounts_section_nav_bar2_my_account{
+            text-decoration: none;
+            color: black;
         }
 
+        .black_a{
+            text-decoration: none;
+            color: black;
+        }
 
-        .atag_login_signup_nav_bar2 {
+        .a_login-signup {
+            text-decoration: none;
+            color: white;
+            background-color: #754FFE;
+            font-size: 1em;
+            padding: 6px 13px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .accounts_section_nav_bar2_login_join a {
             text-decoration: none;
             color: white;
             font-size: 1em;
@@ -27,28 +47,8 @@
             border-radius: 5px;
         }
 
-       
-
-        .logout-btn {
-            font-family: 'Arial', sans-serif;
-            background-color: #4CAF50;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 16px;
-            text-decoration: none;
-        }
-
-            .logout-btn:hover {
-                background-color: #45a049;
-            }
-
-        .accounts_section_nav_bar2_my_account a {
-            text-decoration: none;
-            font-size: 1em;
-        }
+     
+        
     </style>
 
 </head>
@@ -62,11 +62,11 @@
 
             <div class="nav_bar1_contact">
                 <div class="div_inside_contact_nav_bar1">
-                    <img src="/Images/phone-call_4213179.png " width="20" alt="">
+                    <img src="~/images/phone-call_4213179.png" width="20" alt="">
                     <a href="">+91 919191919191</a>
                 </div>
                 <div class="div_inside_contact_nav_bar1">
-                    <img src="/Images/chat_724683.png" width="18" alt="">
+                    <img src="~/images/chat_724683.png" width="18" alt="">
                     <a href=""> internshubservices@gmail.com</a>
                 </div>
             </div>
@@ -74,14 +74,15 @@
             <div class="social_media_language_nav_bar1">
 
                 <div class="social_media_nav_bar1">
-                    <img src="/Images/facebook_2111392.png" width="20" alt="">
-                    <img src="/Images/Twitter_logo.png" width="20" alt="">
+                    <a href="https://www.facebook.com"> <img src="~/images/facebook_2111392.png" width="20" alt=""></a>
+                    <a href="https://www.twitter.com"><img src="~/images/Twitter_logo.png" width="20" alt=""></a>
                 </div>
                 <div class="language_nav_bar1">
 
                     <select name="" id="" class="select_language_nav_bar1">
 
                         <Option>English</Option>
+                        <Option>Pashto</Option>
 
 
                     </select>
@@ -96,64 +97,123 @@
 
 
 
+
         <nav class="nav_bar2">
             <div class="title_search_nav_bar2">
                 <div class="title_search_nav_bar2_ist">
-                    <a asp-controller="Home" asp-action="Index"> <img src="~/images/Internhub_logo_new_wala _blue.png" width="160" alt="Internshub"></a>
+                    <a asp-controller="Home" asp-action="Index"> <img src="~/Images/Internhub_logo_new_wala _blue.png" width="200" alt=""></a>
                 </div>
-                <div class="title_search_nav_bar2_second">
-                    <img src="~/images/dropdown_menu_of_courese_internhub.png" alt="">
-                    <a href="">courses</a>
-                    <div class="hide_coures_nav_bar2">
-                        <img src="/Images/dropdown_menu_of_courese_internhub_black.jpg" width="25" alt="">
-                        <a href="">All courses</a>
-                    </div>
-                </div>
-                <div class="title_search_nav_bar2_third">
-                    <img src="./Images/Search_icon_black.png" width="40">
-                    <!-- <form method="post">
-                      <input type="text" placeholder="Search" >
-                    </form> -->
-                </div>
-
 
             </div>
 
             <div class="accounts_section_nav_bar2">
-               @if(signInManager.IsSignedIn(User))
-                {
-                    <div class="accounts_section_nav_bar2_my_account">
-                        <a asp-controller="Accounts" asp-action="Profile"> <img src="/Images/account-icon-24.jpg" width="35" alt=""></a>
-                        <a asp-controller="Accounts" asp-action="Profile">My Profile</a>
 
-                    </div>
-                }
-                else
-                {
-                    <div class="accounts_section_nav_bar2_my_account">
-                        <a asp-controller="Accounts" asp-action="Login"> <img src="/Images/account-icon-24.jpg" width="35" alt=""></a>
-                        <a asp-controller="Accounts" asp-action="Login">My Profile</a>
+                <div class="accounts_section_nav_bar2_login_join  login_div_above_dropdown_btn">
+                    <a href="">Login</a>
 
-                    </div>
-                }
+                </div>
+                <div class="navbar_dropdown_oveall_div">
 
 
-                @if(signInManager.IsSignedIn(User))
-                {
-                    <a class="logout-btn" asp-area="" asp-controller="Accounts" asp-action="Logout">Logout</a>
-                    if (User.IsInRole("Admin"))
-                    {
-                        <a class="atag_login_signup_nav_bar2" asp-controller="List_Page" asp-action="Create_List">Create</a>
-                        <a class="atag_login_signup_nav_bar2" asp-controller="List_Page" asp-action="List">List</a>
-                    }
-                }
-                else
-                {
-                    <div class="accounts_section_nav_bar2_login_join">
-                        <a class="atag_login_signup_nav_bar2"asp-controller="Accounts" asp-action="Login">Login</a>
-                        <a class="atag_login_signup_nav_bar2" asp-controller="Accounts" asp-action="Signup">Join Now</a>
-                    </div>
-                }
+                    <label class="">
+                        <span class="dropdown_image"><img src="~/images/dropdown_menu_of_courese_internhub_black.jpg" width="40" /></span>
+                        
+                        <input type="checkbox">
+
+
+
+
+
+                        <div class="ul_list_dropdown">
+                            <ul >
+                                @if (signInManager.IsSignedIn(User))
+                                {
+                                    <li>
+                                        <div class="accounts_section_nav_bar2_my_account">
+                                            <a asp-controller="Accounts" asp-action="Profile"> <img src="~/images/account-icon-24.jpg" width="35" alt=""></a>
+                                            <a asp-controller="Accounts" asp-action="Profile" class="black_a">My Account</a>
+
+                                        </div>
+                                    </li>
+                                }
+                                else
+                                {
+                                    <li>
+                                        <div class="accounts_section_nav_bar2_my_account">
+                                            <a asp-controller="Accounts" asp-action="Login"> <img src="~/Images/account-icon-24.jpg" width="35" alt=""></a>
+                                            <a asp-controller="Accounts" asp-action="Login" class="black_a" >My Account</a>
+
+                                        </div>
+                                    </li>
+                                }
+                                <li>
+
+                                    <div class="accounts_section_nav_bar2_my_account">
+                                        <a href="">
+                                            <img src="~/Images/internship-black-glyph-icon-vector-33390190.jpg"
+                                                 width="35" alt="">
+                                        </a>
+                                        <a asp-controller="Home" asp-action="Catagory" class="black_a">Catagory</a>
+
+                                    </div>
+                                </li>
+                                <li>
+
+                                    <div class="accounts_section_nav_bar2_my_account">
+                                        <a asp-controller="Home" asp-action="Jobs"> <img src="~/Images/Courses_2_internship.png" width="35" alt=""></a>
+                                        <a asp-controller="Home" asp-action="Jobs" class="black_a"> jobs</a>
+
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="accounts_section_nav_bar2_my_account accounts_section_nav_bar2_my_account_privacy_policy">
+                                        <a asp-controller="Home" asp-action="Privacy"> <img src="~/Images/Privacy policy.png" width="35" alt=""></a>
+                                        <a asp-controller="Home" asp-action="Privacy" class="black_a">Privacy Policy</a>
+
+                                    </div>
+                                </li>
+
+                                @if (signInManager.IsSignedIn(User))
+                                {
+                                     <li>
+                                    <div class="logout_name_nav_bar2">
+                                        <label>
+
+                                            <div class="username_image_div">
+                                                    <img src="~/images/user.png" width="25" alt="">
+                                                <span> @User?.Identity?.Name</span>
+                                                <img src="~/images/down.png" width="20" alt="">
+                                            </div>
+                                            <input type="checkbox">
+
+                                            <div class="logout_btn">
+                                                <a class="btn bg-secondary text-white" asp-controller="Accounts" asp-action="Logout">Logout</a>
+                                            </div>
+                                        </label>
+                                    </div>
+                                    </li>
+
+                                }
+                                else
+                                {
+                                    <li>
+                                        <div class="accounts_section_nav_bar2_login_join">
+                                            <a asp-controller="Accounts" asp-action="Login">Login</a>
+                                            <div class="accounts_section_nav_bar2_join">
+                                                <a asp-controller="Accounts" asp-action="Signup">Join Now</a>
+                                            </div>
+                                           
+                                        </div>
+                                    </li>
+                                }
+
+                            </ul>
+                        </div>
+                    </label>
+
+
+                </div>
+
 
 
 
@@ -167,16 +227,31 @@
 
 
     </header>
-    <div class="containe">
+  
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
-    </div>
+    
 
     <!--  Footer  -->
 
 
+
     <footer>
+
+        <div class="meidaquery_title_footer">
+            <div class="title_footer_overall_grid">
+                <img src="~/Images/Internhub_logo_new_wala _blue.png" width="200" alt="">
+            </div>
+            <div class="content_sec1_footer_overall_grid">
+
+                Internshub Platform provides Various technical and non-technical, engineering, Business Internships,
+                and Courses to All Graduates and Jobseekers with Domain/Technical Experts on Demand Courses, anytime
+                Online/Offline/ Digital Platforms. Explore thousands of courses and Training along with internships
+                for the lowest price ever!
+
+            </div>
+        </div>
 
         <div class="footer_overall_grid">
 
@@ -231,12 +306,13 @@
             </div>
 
 
-
-
-
-
         </div>
 
+        <div class=" newsletter_footer_class_2">
+            <h2>Subscribe to our newsletter</h2>
+            <input type="email" name="" id="" placeholder="Enter your email here">
+            <button type="submit">Subscribe</button>
+        </div>
 
 
     </footer>

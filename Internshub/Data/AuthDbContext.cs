@@ -12,6 +12,7 @@ namespace Internshub.Data
         
       }
 
+
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);
@@ -53,7 +54,8 @@ namespace Internshub.Data
                 Email = "inayat@gmail.com",
                 NormalizedUserName = "inayat@gmail.com".ToUpper(),
                 NormalizedEmail = "inayat@gmail.com".ToUpper(),
-                 Id= adminId,
+                 Id= adminId,           
+             
             };
 
             adminUser.PasswordHash = new PasswordHasher<IdentityUser>().HashPassword(adminUser, "AdminUser11@");
@@ -76,9 +78,6 @@ namespace Internshub.Data
             };
             builder.Entity<IdentityUserRole<string>>().HasData(adminRoles);
         }
-
-
-
 
 
     }

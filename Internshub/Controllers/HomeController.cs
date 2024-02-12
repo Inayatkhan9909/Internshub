@@ -18,14 +18,15 @@ namespace Internshub.Controllers
         }
 
         [HttpGet]
-        public IActionResult SecureIndex()
+        public IActionResult Catagory()
         {
             return View();
         }
 
-     
-       
-
-       
+        [HttpGet]
+        public IActionResult Jobs()
+        {
+            return View();
+        }
     }
 }

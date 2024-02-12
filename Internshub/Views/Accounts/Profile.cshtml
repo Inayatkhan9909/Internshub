@@ -1,8 +1,211 @@
 ﻿@using Microsoft.AspNetCore.Identity
-@inject SignInManager<IdentityUser> signInManager
+@inject SignInManager<ApplicationUser> signInManager
+@inject UserManager<ApplicationUser> userManager
 
 
-	<h1>Profile</h1>
+    @model Internshub.Models.UserProfileViewModel
+
+
+<div class="profile_oveall_div">
+    <div class="title_myprofile">
+        My Profile
+    </div>
+     @if(signInManager.IsSignedIn(User))
+        {
+    <div class="nav_myprofile">
+      
+            <a href="">form status</a>
+           @if(User.IsInRole("Admin"))
+           {
+                <div class="admin_options_overall_div">
 
 
 
+                    <label class="dropdown_image_admin">
+                        <div class="adminspan_image_div">
+                            <span>Admin</span>
+                            <img src="~/images/down.png" width="20" alt="">
+                        </div>
+                        <input type="checkbox">
+
+
+
+                        <div class="admin_work_list">
+                            <ul>
+                                <li><a href="">Intens list</a></li>
+                                <li><a href="">Add Internship</a></li>
+                                <li><a href="">Add Job</a></li>
+                                <li><a href="">Mange Users</a></li>
+
+                            </ul>
+                        </div>
+
+                    </label>
+                   
+                </div>
+           }
+
+
+    </div>
+    }
+
+    <div class="profile_grid_section ">
+        <div class="index_profile">
+            <img src="https://bootdey.com/img/Content/avatar/avatar7.png" width="150" alt="">
+            <h2>@Model.UserName</h2>
+            <h3>@Model.FirstName @Model.LastName</h3>
+            <span class="span_last_index_profile">About </span>
+        </div>
+        <div class="details_profile">
+            <div class="edit_btn_details_profile">
+                <a class="btn btn-info " asp-controller="Accounts" asp-action="EditProfile">Edit</a>
+            </div>
+            <div>
+                <ul>
+                    <li>
+                        <span><strong>First Name : </strong></span> <span>
+                            @Model.FirstName
+                        </span>
+                    </li>
+                    <div class="line_details_profile"></div>
+                    <li><span><strong> Last Name : </strong></span> <span> @Model.LastName</span> </li>
+                    <div class="line_details_profile"></div>
+                    <li><span><strong>UserName : </strong></span> <span> @Model.UserName</span> </li>
+                    <div class="line_details_profile"></div>
+                    <li><span><strong>Email : </strong></span> <span> @Model.Email</span> </li>
+                    <div class="line_details_profile"></div>
+                    
+                   <li>
+                        <span><strong> Phone : </strong></span>
+                            @if (Model.Phone != null)
+                            {
+                            <span> @Model.Phone</span>
+                            }
+                            else
+                            {
+
+                            <span> NA</span>
+
+                            }
+
+                        
+                   </li>
+                    <div class="line_details_profile"></div>
+
+                    <li>
+                        <span><strong> Address : </strong></span>
+                        @if (Model.Address != null)
+                        {
+                            <span> @Model.Address</span>
+                        }
+                        else
+                        {
+
+                            <span> NA</span>
+
+                        }
+                    </li>
+
+                    <div class="line_details_profile"></div>
+
+                    <li>
+                        <span><strong> City : </strong></span>
+                        @if (Model.City != null)
+                        {
+                            <span>  @Model.City</span>
+                        }
+                        else
+                        {
+
+                            <span> NA</span>
+
+                        }
+                    </li>
+
+                    <div class="line_details_profile"></div>
+
+                    <li>
+                        <span><strong> Country : </strong></span>
+                        @if (Model.Country != null)
+                        {
+                            <span>  @Model.Country</span>
+                        }
+                        else
+                        {
+
+                            <span> NA</span>
+
+                        }
+                    </li>
+
+                    <div class="line_details_profile"></div>
+
+                    <li>
+                        <span><strong> Qualification : </strong></span>
+                        @if (Model.Qualification != null)
+                        {
+                            <span>@Model.Qualification</span>
+                        }
+                        else
+                        {
+
+                            <span> NA</span>
+
+                        }
+                    </li>
+
+                    <div class="line_details_profile"></div>
+
+                    <li>
+                        <span><strong> Skills : </strong></span>
+                        @if (Model.Skills != null)
+                        {
+                            <span>@Model.Skills</span>
+                        }
+                        else
+                        {
+
+                            <span> NA</span>
+
+                        }
+                    </li>
+
+
+                    <div class="line_details_profile"></div>
+
+                    <li>
+                        <span><strong> Skills : </strong></span>
+                        @if (Model.Skills != null)
+                        {
+                            <span>@Model.Skills</span>
+                        }
+                        else
+                        {
+
+                            <span> NA</span>
+
+                        }
+                    </li>
+
+                </ul>
+            </div>
+
+
+            @if (Model.Address == null || Model.Phone == null || Model.City == null ||
+            Model.Country == null || Model.Qualification == null || Model.Skills == null)
+            {
+                <div class="edit_btn_details_profile">
+                    <a href="">complete your profile</a>
+                </div>
+            }
+
+           
+        </div>
+    </div>
+
+    <div class="delete_btn_details_profile">
+        <a asp-controller="Accounts" asp-action="DeleteAccount">Delete Account</a>
+
+    </div>
+</div>
+  

@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets\\Internshub.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\inaya\\OneDrive\\Desktop\\asp web app\\Internshub\\Internshub\\wwwroot\\css\\StyleSheet.css",
+      "PackagePath": "staticwebassets\\css\\StyleSheet.css"
+    },
+    {
       "Id": "C:\\Users\\inaya\\OneDrive\\Desktop\\asp web app\\Internshub\\Internshub\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
@@ -15,6 +19,18 @@
     {
       "Id": "C:\\Users\\inaya\\OneDrive\\Desktop\\asp web app\\Internshub\\Internshub\\wwwroot\\images\\Angular_logo.png",
       "PackagePath": "staticwebassets\\images\\Angular_logo.png"
+    },
+    {
+      "Id": "C:\\Users\\inaya\\OneDrive\\Desktop\\asp web app\\Internshub\\Internshub\\wwwroot\\images\\Courses_2_internship.png",
+      "PackagePath": "staticwebassets\\images\\Courses_2_internship.png"
+    },
+    {
+      "Id": "C:\\Users\\inaya\\OneDrive\\Desktop\\asp web app\\Internshub\\Internshub\\wwwroot\\images\\Disney-Hotstar-logo-featured.jpg",
+      "PackagePath": "staticwebassets\\images\\Disney-Hotstar-logo-featured.jpg"
+    },
+    {
+      "Id": "C:\\Users\\inaya\\OneDrive\\Desktop\\asp web app\\Internshub\\Internshub\\wwwroot\\images\\Hardware engineering internship.jpg",
+      "PackagePath": "staticwebassets\\images\\Hardware engineering internship.jpg"
     },
     {
       "Id": "C:\\Users\\inaya\\OneDrive\\Desktop\\asp web app\\Internshub\\Internshub\\wwwroot\\images\\Internhub_logo_new_wala _blue.png",
@@ -29,8 +45,28 @@
       "PackagePath": "staticwebassets\\images\\Internship_photo_signup.webp"
     },
     {
-      "Id": "C:\\Users\\inaya\\OneDrive\\Desktop\\asp web app\\Internshub\\Internshub\\wwwroot\\images\\Javascript_logo.png",
-      "PackagePath": "staticwebassets\\images\\Javascript_logo.png"
+      "Id": "C:\\Users\\inaya\\OneDrive\\Desktop\\asp web app\\Internshub\\Internshub\\wwwroot\\images\\MBA Internship.jpg",
+      "PackagePath": "staticwebassets\\images\\MBA Internship.jpg"
+    },
+    {
+      "Id": "C:\\Users\\inaya\\OneDrive\\Desktop\\asp web app\\Internshub\\Internshub\\wwwroot\\images\\Menu_dropdown_icon.jpg",
+      "PackagePath": "staticwebassets\\images\\Menu_dropdown_icon.jpg"
+    },
+    {
+      "Id": "C:\\Users\\inaya\\OneDrive\\Desktop\\asp web app\\Internshub\\Internshub\\wwwroot\\images\\Myntra image.png",
+      "PackagePath": "staticwebassets\\images\\Myntra image.png"
+    },
+    {
+      "Id": "C:\\Users\\inaya\\OneDrive\\Desktop\\asp web app\\Internshub\\Internshub\\wwwroot\\images\\NET_Core_Logo.svg.png",
+      "PackagePath": "staticwebassets\\images\\NET_Core_Logo.svg.png"
+    },
+    {
+      "Id": "C:\\Users\\inaya\\OneDrive\\Desktop\\asp web app\\Internshub\\Internshub\\wwwroot\\images\\PhonePe_Logo.svg.png",
+      "PackagePath": "staticwebassets\\images\\PhonePe_Logo.svg.png"
+    },
+    {
+      "Id": "C:\\Users\\inaya\\OneDrive\\Desktop\\asp web app\\Internshub\\Internshub\\wwwroot\\images\\Privacy policy.png",
+      "PackagePath": "staticwebassets\\images\\Privacy policy.png"
     },
     {
       "Id": "C:\\Users\\inaya\\OneDrive\\Desktop\\asp web app\\Internshub\\Internshub\\wwwroot\\images\\Python-Symbol.png",
@@ -39,6 +75,10 @@
     {
       "Id": "C:\\Users\\inaya\\OneDrive\\Desktop\\asp web app\\Internshub\\Internshub\\wwwroot\\images\\React-Symbol.png",
       "PackagePath": "staticwebassets\\images\\React-Symbol.png"
+    },
+    {
+      "Id": "C:\\Users\\inaya\\OneDrive\\Desktop\\asp web app\\Internshub\\Internshub\\wwwroot\\images\\STEP internship.jpg",
+      "PackagePath": "staticwebassets\\images\\STEP internship.jpg"
     },
     {
       "Id": "C:\\Users\\inaya\\OneDrive\\Desktop\\asp web app\\Internshub\\Internshub\\wwwroot\\images\\Search_icon_black.png",
@@ -57,12 +97,32 @@
       "PackagePath": "staticwebassets\\images\\account-icon-24.jpg"
     },
     {
-      "Id": "C:\\Users\\inaya\\OneDrive\\Desktop\\asp web app\\Internshub\\Internshub\\wwwroot\\images\\asp.net_logo.jpeg",
-      "PackagePath": "staticwebassets\\images\\asp.net_logo.jpeg"
+      "Id": "C:\\Users\\inaya\\OneDrive\\Desktop\\asp web app\\Internshub\\Internshub\\wwwroot\\images\\amazon image.png",
+      "PackagePath": "staticwebassets\\images\\amazon image.png"
+    },
+    {
+      "Id": "C:\\Users\\inaya\\OneDrive\\Desktop\\asp web app\\Internshub\\Internshub\\wwwroot\\images\\asosiate product manager.jpg",
+      "PackagePath": "staticwebassets\\images\\asosiate product manager.jpg"
+    },
+    {
+      "Id": "C:\\Users\\inaya\\OneDrive\\Desktop\\asp web app\\Internshub\\Internshub\\wwwroot\\images\\business_internship.jpg",
+      "PackagePath": "staticwebassets\\images\\business_internship.jpg"
     },
     {
       "Id": "C:\\Users\\inaya\\OneDrive\\Desktop\\asp web app\\Internshub\\Internshub\\wwwroot\\images\\chat_724683.png",
       "PackagePath": "staticwebassets\\images\\chat_724683.png"
+    },
+    {
+      "Id": "C:\\Users\\inaya\\OneDrive\\Desktop\\asp web app\\Internshub\\Internshub\\wwwroot\\images\\cred image.png",
+      "PackagePath": "staticwebassets\\images\\cred image.png"
+    },
+    {
+      "Id": "C:\\Users\\inaya\\OneDrive\\Desktop\\asp web app\\Internshub\\Internshub\\wwwroot\\images\\down.png",
+      "PackagePath": "staticwebassets\\images\\down.png"
+    },
+    {
+      "Id": "C:\\Users\\inaya\\OneDrive\\Desktop\\asp web app\\Internshub\\Internshub\\wwwroot\\images\\dream 11.png",
+      "PackagePath": "staticwebassets\\images\\dream 11.png"
     },
     {
       "Id": "C:\\Users\\inaya\\OneDrive\\Desktop\\asp web app\\Internshub\\Internshub\\wwwroot\\images\\dropdown_menu_of_courese_internhub.png",
@@ -77,8 +137,80 @@
       "PackagePath": "staticwebassets\\images\\facebook_2111392.png"
     },
     {
+      "Id": "C:\\Users\\inaya\\OneDrive\\Desktop\\asp web app\\Internshub\\Internshub\\wwwroot\\images\\filpcart logo.png",
+      "PackagePath": "staticwebassets\\images\\filpcart logo.png"
+    },
+    {
+      "Id": "C:\\Users\\inaya\\OneDrive\\Desktop\\asp web app\\Internshub\\Internshub\\wwwroot\\images\\google-939112_640.png",
+      "PackagePath": "staticwebassets\\images\\google-939112_640.png"
+    },
+    {
+      "Id": "C:\\Users\\inaya\\OneDrive\\Desktop\\asp web app\\Internshub\\Internshub\\wwwroot\\images\\infosys image.png",
+      "PackagePath": "staticwebassets\\images\\infosys image.png"
+    },
+    {
+      "Id": "C:\\Users\\inaya\\OneDrive\\Desktop\\asp web app\\Internshub\\Internshub\\wwwroot\\images\\internship-black-glyph-icon-vector-33390190.jpg",
+      "PackagePath": "staticwebassets\\images\\internship-black-glyph-icon-vector-33390190.jpg"
+    },
+    {
+      "Id": "C:\\Users\\inaya\\OneDrive\\Desktop\\asp web app\\Internshub\\Internshub\\wwwroot\\images\\javascript-logo-javascript-icon-transparent-free-png.webp",
+      "PackagePath": "staticwebassets\\images\\javascript-logo-javascript-icon-transparent-free-png.webp"
+    },
+    {
+      "Id": "C:\\Users\\inaya\\OneDrive\\Desktop\\asp web app\\Internshub\\Internshub\\wwwroot\\images\\link.png",
+      "PackagePath": "staticwebassets\\images\\link.png"
+    },
+    {
+      "Id": "C:\\Users\\inaya\\OneDrive\\Desktop\\asp web app\\Internshub\\Internshub\\wwwroot\\images\\microsoft image.jpg",
+      "PackagePath": "staticwebassets\\images\\microsoft image.jpg"
+    },
+    {
+      "Id": "C:\\Users\\inaya\\OneDrive\\Desktop\\asp web app\\Internshub\\Internshub\\wwwroot\\images\\netflix logo new.png",
+      "PackagePath": "staticwebassets\\images\\netflix logo new.png"
+    },
+    {
+      "Id": "C:\\Users\\inaya\\OneDrive\\Desktop\\asp web app\\Internshub\\Internshub\\wwwroot\\images\\oneplus mobile.png",
+      "PackagePath": "staticwebassets\\images\\oneplus mobile.png"
+    },
+    {
+      "Id": "C:\\Users\\inaya\\OneDrive\\Desktop\\asp web app\\Internshub\\Internshub\\wwwroot\\images\\payoneer image.png",
+      "PackagePath": "staticwebassets\\images\\payoneer image.png"
+    },
+    {
+      "Id": "C:\\Users\\inaya\\OneDrive\\Desktop\\asp web app\\Internshub\\Internshub\\wwwroot\\images\\paypal new.png",
+      "PackagePath": "staticwebassets\\images\\paypal new.png"
+    },
+    {
       "Id": "C:\\Users\\inaya\\OneDrive\\Desktop\\asp web app\\Internshub\\Internshub\\wwwroot\\images\\phone-call_4213179.png",
       "PackagePath": "staticwebassets\\images\\phone-call_4213179.png"
+    },
+    {
+      "Id": "C:\\Users\\inaya\\OneDrive\\Desktop\\asp web app\\Internshub\\Internshub\\wwwroot\\images\\profile-circle-icon-2048x2048-cqe5466q.png",
+      "PackagePath": "staticwebassets\\images\\profile-circle-icon-2048x2048-cqe5466q.png"
+    },
+    {
+      "Id": "C:\\Users\\inaya\\OneDrive\\Desktop\\asp web app\\Internshub\\Internshub\\wwwroot\\images\\samsung.png",
+      "PackagePath": "staticwebassets\\images\\samsung.png"
+    },
+    {
+      "Id": "C:\\Users\\inaya\\OneDrive\\Desktop\\asp web app\\Internshub\\Internshub\\wwwroot\\images\\software engineer internship.jpg",
+      "PackagePath": "staticwebassets\\images\\software engineer internship.jpg"
+    },
+    {
+      "Id": "C:\\Users\\inaya\\OneDrive\\Desktop\\asp web app\\Internshub\\Internshub\\wwwroot\\images\\tcs_logo_1200_020621101143.avif",
+      "PackagePath": "staticwebassets\\images\\tcs_logo_1200_020621101143.avif"
+    },
+    {
+      "Id": "C:\\Users\\inaya\\OneDrive\\Desktop\\asp web app\\Internshub\\Internshub\\wwwroot\\images\\unnamed copy.webp",
+      "PackagePath": "staticwebassets\\images\\unnamed copy.webp"
+    },
+    {
+      "Id": "C:\\Users\\inaya\\OneDrive\\Desktop\\asp web app\\Internshub\\Internshub\\wwwroot\\images\\user.png",
+      "PackagePath": "staticwebassets\\images\\user.png"
+    },
+    {
+      "Id": "C:\\Users\\inaya\\OneDrive\\Desktop\\asp web app\\Internshub\\Internshub\\wwwroot\\images\\wipro.png",
+      "PackagePath": "staticwebassets\\images\\wipro.png"
     },
     {
       "Id": "C:\\Users\\inaya\\OneDrive\\Desktop\\asp web app\\Internshub\\Internshub\\wwwroot\\js\\site.js",

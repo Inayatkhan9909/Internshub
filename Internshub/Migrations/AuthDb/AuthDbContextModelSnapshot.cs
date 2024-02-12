@@ -159,15 +159,15 @@ namespace Internshub.Migrations.AuthDb
                         {
                             Id = "4a930840-ebf6-4d4f-adf1-87aa7965d4a8",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "d13677cf-7ade-49c3-89d1-0ede30ea681f",
+                            ConcurrencyStamp = "a13698a6-16e0-4e6e-9e01-535d29872488",
                             Email = "inayat@gmail.com",
                             EmailConfirmed = false,
                             LockoutEnabled = false,
                             NormalizedEmail = "INAYAT@GMAIL.COM",
                             NormalizedUserName = "INAYAT@GMAIL.COM",
-                            PasswordHash = "AQAAAAIAAYagAAAAEMxvBgByjmjq8DTxezvTYbMz1YY123By00nc7v35tqz/JJugRXtNLqayeb0qW9rXvA==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEAg5FaZSJ/inxeL6cfdYdZX5i2rLCsii9bUj3bO3vyZXYTGeGZ++Zztn5dPRzTwIqQ==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "bd2e843b-c610-47a9-8c69-e139a1e3747c",
+                            SecurityStamp = "87405417-afae-4cb4-ae34-91eed20cf590",
                             TwoFactorEnabled = false,
                             UserName = "inayat@gmail.com"
                         });
