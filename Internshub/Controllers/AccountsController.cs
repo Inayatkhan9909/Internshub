@@ -100,14 +100,23 @@ namespace Internshub.Controllers
         [HttpPost]
         public async Task<IActionResult> Login(loginUser model)
         {
-            var login = await _signInManager.PasswordSignInAsync(model.username, model.password,false,false);
-
-            if (login!=null && login.Succeeded)
+            if (ModelState.IsValid)
             {
- 
-                return RedirectToAction("Index", "Home");
+                var login = await _signInManager.PasswordSignInAsync(model.username, model.password, false, false);
+
+                if (login != null && login.Succeeded)
+                {
+
+                    return RedirectToAction("Index", "Home");
+                }
+                return View(model);
             }
-            return View(model);
+            else
+            {
+               
+                return View(model);
+            }
+
         }
 
         [HttpGet]

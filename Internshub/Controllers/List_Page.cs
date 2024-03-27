@@ -2,6 +2,7 @@
 using Internshub.Models;
 using Internshub.Data;
 using Microsoft.AspNetCore.Authorization;
+using CloudinaryDotNet;
 
 namespace Internshub.Controllers
 {
@@ -14,6 +15,7 @@ namespace Internshub.Controllers
             _dbContext = dbContext;
         }
 
+       
 
 
         [HttpGet]
