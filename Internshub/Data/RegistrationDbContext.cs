@@ -10,6 +10,6 @@ namespace Internshub.Data
         {
         }
 
-        public DbSet<Intern> Interns { get; set; }
+        public DbSet<EnrollModel> Interns { get; set; }
     }
 }

@@ -14,12 +14,10 @@
         {
     <div class="nav_myprofile">
       
-            <a href="">form status</a>
+            
            @if(User.IsInRole("Admin"))
            {
                 <div class="admin_options_overall_div">
-
-
 
                     <label class="dropdown_image_admin">
                         <div class="adminspan_image_div">
@@ -28,14 +26,12 @@
                         </div>
                         <input type="checkbox">
 
-
-
                         <div class="admin_work_list">
                             <ul>
-                                <li><a asp-controller="List_Page" asp-action="List">Intens list</a></li>
-                                <li><a href="">Add Internship</a></li>
-                                <li><a href="">Add Job</a></li>
-                                <li><a href="">Mange Users</a></li>
+                                <li><a asp-controller="Admin" asp-action="Enrolled_List">Intens list</a></li>
+                                <li><a asp-controller="Admin" asp-action="AddInternship">Add Internship</a></li>
+                                <li><a asp-controller="Admin" asp-action="Internships_list">Internships list</a></li>
+                               @*  <li><a href="">Mange Users</a></li>  *@
 
                             </ul>
                         </div>
@@ -43,7 +39,11 @@
                     </label>
                    
                 </div>
-           }
+            }
+            else
+            {
+                <a asp-controller="Admin" asp-action="FormStatusbyId">form status</a>
+            }
 
 
     </div>
@@ -154,22 +154,6 @@
                         }
                     </li>
 
-                    <div class="line_details_profile"></div>
-
-                    <li>
-                        <span><strong> Skills : </strong></span>
-                        @if (Model.Skills != null)
-                        {
-                            <span>@Model.Skills</span>
-                        }
-                        else
-                        {
-
-                            <span> NA</span>
-
-                        }
-                    </li>
-
 
                     <div class="line_details_profile"></div>
 
@@ -195,7 +179,7 @@
             Model.Country == null || Model.Qualification == null || Model.Skills == null)
             {
                 <div class="edit_btn_details_profile">
-                    <a href="">complete your profile</a>
+                    <a asp-controller="Accounts" asp-action="CompleteProfile">complete your profile</a>
                 </div>
             }
 

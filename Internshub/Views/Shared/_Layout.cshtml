@@ -47,6 +47,14 @@
             border-radius: 5px;
         }
 
+        .login_div_above_dropdown_btn a{
+            font-size: 0.8em;
+            background-color: #754FFE;
+            padding: 5px 10px;
+            border: none;
+            border-radius: 5px;
+        }
+
      
         
     </style>
@@ -101,22 +109,38 @@
         <nav class="nav_bar2">
             <div class="title_search_nav_bar2">
                 <div class="title_search_nav_bar2_ist">
-                    <a asp-controller="Home" asp-action="Index"> <img src="~/Images/Internhub_logo_new_wala _blue.png" width="200" alt=""></a>
+                    <a asp-controller="Home" asp-action="Index"> <img src="~/Images/Internhub_logo_new_wala _blue.png" width="180" alt=""></a>
                 </div>
 
             </div>
 
             <div class="accounts_section_nav_bar2">
 
-                <div class="accounts_section_nav_bar2_login_join  login_div_above_dropdown_btn">
-                    <a href="">Login</a>
+                
+                    @if(signInManager.IsSignedIn(User))
+                    {
+                        
+                            <div class="username_image_div_for_query">
+                                <a asp-controller="Accounts" asp-action="Profile"> <img src="~/images/user.png" width="25" alt=""></a>
+                                <a asp-controller="Accounts" asp-action="Profile" class="black_a"> <span> @User?.Identity?.Name</span></a>
 
-                </div>
+                            </div>
+                           
+                    }
+                    else
+                    {
+                    <div class="accounts_section_nav_bar2_login_join  login_div_above_dropdown_btn">
+                        <a asp-controller="Accounts" asp-action="Login" >Login</a>
+                    </div>
+                    }
+                   
+
+               
                 <div class="navbar_dropdown_oveall_div">
 
 
                     <label class="">
-                        <span class="dropdown_image"><img src="~/images/dropdown_menu_of_courese_internhub_black.jpg" width="40" /></span>
+                        <span class="dropdown_image"><img src="~/images/dropdown_menu_of_courese_internhub_black.jpg" width="35" /></span>
                         
                         <input type="checkbox">
 
@@ -126,32 +150,13 @@
 
                         <div class="ul_list_dropdown">
                             <ul >
-                                @if (signInManager.IsSignedIn(User))
-                                {
-                                    <li>
-                                        <div class="accounts_section_nav_bar2_my_account">
-                                            <a asp-controller="Accounts" asp-action="Profile"> <img src="~/images/account-icon-24.jpg" width="35" alt=""></a>
-                                            <a asp-controller="Accounts" asp-action="Profile" class="black_a">My Account</a>
-
-                                        </div>
-                                    </li>
-                                }
-                                else
-                                {
-                                    <li>
-                                        <div class="accounts_section_nav_bar2_my_account">
-                                            <a asp-controller="Accounts" asp-action="Login"> <img src="~/Images/account-icon-24.jpg" width="35" alt=""></a>
-                                            <a asp-controller="Accounts" asp-action="Login" class="black_a" >My Account</a>
-
-                                        </div>
-                                    </li>
-                                }
+                           
                                 <li>
 
                                     <div class="accounts_section_nav_bar2_my_account">
-                                        <a href="">
-                                            <img src="~/Images/internship-black-glyph-icon-vector-33390190.jpg"
-                                                 width="35" alt="">
+                                        <a asp-controller="Home" asp-action="Catagory">
+                                            <img src="~/images/intern_catagory_icon.png" width="35" />
+                                                
                                         </a>
                                         <a asp-controller="Home" asp-action="Catagory" class="black_a">Catagory</a>
 
@@ -175,22 +180,39 @@
 
                                 @if (signInManager.IsSignedIn(User))
                                 {
-                                     <li>
-                                    <div class="logout_name_nav_bar2">
-                                        <label>
+                                    <li class="li_profile_logout_overall">
+                                        <div class="username_image_div">
+                                            <a asp-controller="Accounts" asp-action="Profile"> <img src="~/images/user.png" width="25" alt=""></a>
+                                            <a asp-controller="Accounts" asp-action="Profile" class="black_a"> <span> @User?.Identity?.Name</span></a>
 
-                                            <div class="username_image_div">
-                                                    <img src="~/images/user.png" width="25" alt="">
-                                                <span> @User?.Identity?.Name</span>
+                                        </div>
+                                        <div class="logout_name_nav_bar2">
+
+                                            <label>
                                                 <img src="~/images/down.png" width="20" alt="">
-                                            </div>
-                                            <input type="checkbox">
+                                                <input type="checkbox">
 
-                                            <div class="logout_btn">
+                                                <div class="logout_btn">
+                                                    <a class="btn bg-secondary text-white" asp-controller="Accounts" asp-action="Logout">Logout</a>
+                                                </div>
+                                            </label>
+                                        </div>
+                                    </li>
+
+                                    <li class="li_profile_dropdown">
+                                        <div class="username_image_div">
+                                            <a asp-controller="Accounts" asp-action="Profile"> <img src="~/images/user.png" width="25" alt=""></a>
+                                            <a asp-controller="Accounts" asp-action="Profile" class="black_a"> <span> @User?.Identity?.Name</span></a>
+
+                                        </div>
+
+                                    </li>
+                                    <li class="li_logout_dropdown">
+                                        
+                                            <div class="logout_btn_dropdown">
                                                 <a class="btn bg-secondary text-white" asp-controller="Accounts" asp-action="Logout">Logout</a>
                                             </div>
-                                        </label>
-                                    </div>
+
                                     </li>
 
                                 }

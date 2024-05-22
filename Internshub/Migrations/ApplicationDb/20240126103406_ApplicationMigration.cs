@@ -27,7 +27,7 @@ namespace Internshub.Migrations.ApplicationDb
                     table.PrimaryKey("PK_AspNetRoles", x => x.Id);
                 });
 
-            migrationBuilder.CreateTable(
+              migrationBuilder.CreateTable(
                 name: "AspNetUsers",
                 columns: table => new
                 {

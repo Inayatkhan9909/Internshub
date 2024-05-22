@@ -6908,11 +6908,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\inaya\\OneDrive\\Desktop\\asp web app\\Internshub\\Internshub\\Internshub.csproj",
+      "projectUniqueName": "C:\\Users\\inaya\\Desktop\\Internshub\\Internshub\\Internshub.csproj",
       "projectName": "Internshub",
-      "projectPath": "C:\\Users\\inaya\\OneDrive\\Desktop\\asp web app\\Internshub\\Internshub\\Internshub.csproj",
+      "projectPath": "C:\\Users\\inaya\\Desktop\\Internshub\\Internshub\\Internshub.csproj",
       "packagesPath": "C:\\Users\\inaya\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\inaya\\OneDrive\\Desktop\\asp web app\\Internshub\\Internshub\\obj\\",
+      "outputPath": "C:\\Users\\inaya\\Desktop\\Internshub\\Internshub\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\inaya\\AppData\\Roaming\\NuGet\\NuGet.Config",

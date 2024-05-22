@@ -14,31 +14,38 @@
 
             <h1>Login!</h1> 
 
-
+            <div asp-validation-summary="All" class="text-danger"></div>
             <div class="form_fields">
 
                 <div class="fields">
                     <label for="username">Username</label>
                     <input type="text" name="username" placeholder="Enter your Username"  id="username"  >
-                    <span asp-validation-for="username" style="color:red;"></span>
+                    <span asp-validation-for="username" style="color:red; font-size:0.6em;"></span>
+
                 </div>
 
 
                 <div class="fields">
                     <label for="password">Password</label>
                     <input type="password" name="password"  placeholder="Enter your Password" id="password" >
-                    <span style="color:red;" asp-validation-for="password"></span>
+                    <span style="color:red; font-size:0.6em;" asp-validation-for="password"></span>
                 </div>
 
 
 
             </div>
+            <div class="already_user">
+                 <a asp-controller="" asp-action="">Forgot Password</a>
+            </div>
+           
 
             <div class="form_submit_div">
                 <button type="submit">Login</button>
             </div>
 
-
+            <div class="already_user">
+                Don't have an Account? <a asp-controller="Accounts" asp-action="Signup">Join now</a>
+            </div>
 
 
 

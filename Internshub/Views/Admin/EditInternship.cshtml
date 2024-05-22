@@ -1,0 +1,88 @@
+﻿@model Internshub.Models.AddInternshipModel
+
+
+<form class="enroll_form" method="post" enctype="multipart/form-data">
+    <div class="head_enroll">
+        <h1>Edit Internship</h1>
+    </div>
+
+    <div class="enroll_fields">
+
+        <div class="fields_e">
+            <label for="Internship_Name">Internship Name</label>
+            <input type="text" value="@Model?.Internship_Name" name="Internship_Name">
+            <span asp-validation-for="Internship_Name" style="color:red; font-size:0.6em;"></span>
+        </div>
+
+        <div class="fields_e">
+            <label for="Internship_Skills">Skills</label>
+            <input type="text" value="@Model?.Internship_Skills" name="Internship_Skills">
+            <span asp-validation-for="Internship_Skills" style="color:red; font-size:0.6em;"></span>
+        </div>
+
+        <div class="fields_e">
+            <label for="Internship_details">Details</label>
+            <textarea name="Internship_details" rows="4">@Model?.Internship_details</textarea>
+            <span asp-validation-for="Internship_details" style="color:red; font-size:0.6em;"></span>
+        </div>
+
+
+        <div class="fields_e">
+            <label for="Duration">Duration (in months)</label>
+            <input type="number" min="1" step="1" value="@Model?.Duration" name="Duration" asp-for="Duration">
+            <span asp-validation-for="Duration" style="color:red; font-size:0.6em;"></span>
+        </div>
+
+        <div class="fields_e">
+            <label for="Responsibilites">Responsibilities</label>
+            <textarea name="Responsibilites" rows="4">@Model?.Responsibilites</textarea>
+            <span asp-validation-for="Responsibilites" style="color:red; font-size:0.6em;"></span>
+        </div>
+
+
+        <div class="fields_e">
+            <label for="MinQualification">Minimum Qualification </label>
+            <input type="text" name="MinQualification" value="@Model?.MinQualification" asp-for="MinQualification">
+            <span asp-validation-for="MinQualification" style="color:red; font-size:0.6em;"></span>
+        </div>
+
+
+        <div class="fields_e">
+            <label for="InternshipMode">Mode</label>
+            <select name="InternshipMode">
+                <option value="@Model?.InternshipMode" hidden>@Model?.InternshipMode</option>
+                <option value="WFH">Work From Home</option>
+                <option value="Hybrid">Hybrid</option>
+                <option value="Office">Office</option>
+            </select>
+            <span asp-validation-for="InternshipMode" style="color:red; font-size:0.6em;"></span>
+        </div>
+
+        <div class="fields_e">
+            <label for="InternshipType">Internship Type</label>
+            <select name="InternshipType">
+                <option value="@Model?.InternshipType" hidden>@Model?.InternshipType</option>
+                <option value="Buisness internships">Buisness internships</option>
+                <option value="STEP internship">STEP internship</option>
+                <option value="Software engineering">Software engineering</option>
+                <option value="Product Manager">Product Manager</option>
+                <option value="MBA internships">MBA internships</option>
+                <option value="Hardware Engineering">Hardware Engineering</option>
+            </select>
+            <span asp-validation-for="InternshipType" style="color:red; font-size:0.6em;"></span>
+        </div>
+
+
+@*         <div class="fields_e">
+            <label for="IntershipPicFile">Image</label>
+            <input type="file" name="IntershipPicFile" asp-for="IntershipPicFile">
+            <span asp-validation-for="IntershipPicFile" style="color:red; font-size:0.6em;"></span>
+        </div> *@
+
+    </div>
+
+    <div class="form_submit_div">
+        <button type="submit">Update</button>
+    </div>
+
+</form>

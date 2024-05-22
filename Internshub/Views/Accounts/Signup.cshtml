@@ -1,5 +1,5 @@
 ﻿
-@model Internshub.Models.Users
+@model Internshub.Models.UsersModel
 
 
 
@@ -20,38 +20,46 @@
 
                 <div class="fields">
                     <label for="FirstName">FirstName</label>
-                    <input type="text" name="FirstName" placeholder="Enter your FirstName" id="FirstName" required>
+                    <input type="text" name="FirstName" placeholder="Enter your First Name" id="FirstName" >
+                    <span asp-validation-for="FirstName" style="color:red; font-size:0.6em;"></span>
                 </div>
                 <div class="fields">
                     <label for="LastName">LastName</label>
-                    <input type="text" name="LastName" placeholder="Enter your LastName" id="LastName" required>
+                    <input type="text" name="LastName" placeholder="Enter your Last Name" id="LastName" >
+                    <span asp-validation-for="LastName" style="color:red; font-size:0.6em;"></span>
                 </div>
 
                 <div class="fields">
                     <label for="username">Username</label>
-                    <input type="text" name="username" placeholder="Enter your Username" asp-for="username" id="username" required>
+                    <input type="text" name="username" placeholder="Enter your Username" asp-for="username" id="username" >
+                    <span asp-validation-for="username" style="color:red; font-size:0.6em;"></span>
                 </div>
 
                 <div class="fields">
                     <label for="email">Email</label>
-                    <input type="email" name="email"  placeholder="Enter Your Email" id="email" required>
+                    <input type="email" name="email"  placeholder="Enter Your Email" id="email" >
+                    <span asp-validation-for="email" style="color:red; font-size:0.6em;"></span>
                 </div>
 
 
                 <div class="fields">
                     <label for="password">Password</label>
-                    <input type="password" name="password"  placeholder="Enter your Password" id="password" required>
+                    <input type="password" name="password"  placeholder="Enter your Password" id="password" >
+                    <span asp-validation-for="password" style="color:red; font-size:0.6em;"></span>
                 </div>
 
 
 
             </div>
 
+
+            <div class="already_user">
+                Already have Account? <a asp-controller="Accounts" asp-action="Login">login</a>
+            </div>
+
             <div class="form_submit_div">
                 <button type="submit">Signup</button>
             </div>
-
-
 
 
 

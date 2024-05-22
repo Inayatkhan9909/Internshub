@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Internshub")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fddf139c866ad7c483799dd52ecf562fe03bb970")]
 [assembly: System.Reflection.AssemblyProductAttribute("Internshub")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Internshub")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -1,7 +1,11 @@
-﻿@{
+﻿@using Internshub.Models;
+@using Microsoft.AspNetCore.Identity
+@inject UserManager<ApplicationUser> usermanager
+@inject SignInManager<ApplicationUser> signInManager
+
+@{
     ViewData["Title"] = "Home Page";
 }
-
 
 
 <div class="index_main_grid_div">
@@ -68,7 +72,18 @@
             1. Work on software development <br>
             2. Work on programming language tools and applications
         </p>
-        <a href="">Enroll</a>
+        <div>
+            @* <button>Duration 6 months</button>  <button>WFH</button> *@
+
+        </div>
+        @if(signInManager.IsSignedIn(User))
+        {
+            <a asp-controller="Admin" asp-action="Enroll" asp-route-data="ASP.NET">Enroll</a>
+        }
+        else
+        {
+            <a asp-controller="Accounts" asp-action="Login">Enroll</a>
+        }
     </div>
 
 
@@ -89,7 +104,14 @@
             2. Work with the team to debug and troubleshoot issues <br>
         </p>
 
-        <a href="">Enroll</a>
+        @if (signInManager.IsSignedIn(User))
+        {
+            <a asp-controller="Admin" asp-action="Enroll" asp-route-data="javascript">Enroll</a>
+        }
+        else
+        {
+            <a asp-controller="Accounts" asp-action="Login" >Enroll</a>
+        }
     </div>
 
 
@@ -110,7 +132,14 @@
             2. Writing clean, efficient, and maintainable code to ensure the scalability and performance of our web applications <br>
             
         </p>
-        <a href="">Enroll</a>
+        @if (signInManager.IsSignedIn(User))
+        {
+            <a asp-controller="Admin" asp-action="Enroll" asp-route-data="Angular.js">Enroll</a>
+        }
+        else
+        {
+            <a asp-controller="Accounts" asp-action="Login">Enroll</a>
+        }
     </div>
 
 
@@ -132,7 +161,14 @@
             2. Collaborate with the team to implement scalable and efficient server-side logic <br>
             3. Develop Python scripts to automate repetitive tasks and streamline workflows
         </p>
-        <a asp-controller="List_Page" asp-action="Create_List">Enroll</a>
+        @if (signInManager.IsSignedIn(User))
+        {
+            <a asp-controller="Admin" asp-action="Enroll" asp-route-data="Python">Enroll</a>
+        }
+        else
+        {
+            <a asp-controller="Accounts" asp-action="Login">Enroll</a>
+        }
     </div>
 
     <!-- React -->
@@ -153,7 +189,14 @@
             ReactJS Development using the latest UI and UX Principles, Design patterns and coding methodologies on. <br>
             
         </p>
-        <a asp-controller="List_Page" asp-action="Create">Enroll</a>
+        @if (signInManager.IsSignedIn(User))
+        {
+            <a asp-controller="Admin" asp-action="Enroll" asp-route-data="React">Enroll</a>
+        }
+        else
+        {
+            <a asp-controller="Accounts" asp-action="Login">Enroll</a>
+        }
     </div>
 
 

@@ -1,0 +1,134 @@
+﻿@model List<EnrollModel>;
+
+
+
+<style>
+    .formstatus_container{
+        min-height:90vh;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 20px;
+    }
+
+    th, td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: left;
+    }
+
+    th {
+        background-color: #f2f2f2;
+    }
+
+    tr:hover {
+        background-color: #f5f5f5;
+    }
+
+
+    .edit_details {
+        display: inline-block;
+        background-color: #3498db;
+        color: #fff;
+        padding: 10px 15px;
+        text-decoration: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 14px;
+    }
+
+    .red_edit_details {
+        background-color: rgb(197, 21, 21);
+    }
+
+    .edit_details:hover {
+        background-color: #2980b9;
+        color:white;
+    }
+
+    .red_edit_details:hover {
+        background-color: rgb(158, 21, 21);
+        color:white;
+    }
+
+    .edit_details:focus {
+        outline: none;
+    }
+
+    .get_resume {
+        display: inline-block;
+        padding: 8px 16px;
+        background-color: #007bff;
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        font-size: 16px;
+        border-radius: 5px;
+        border: none;
+        cursor: pointer;
+    }
+
+        .get_resume:hover {
+            background-color: #0056b3;
+            color: white;
+        }
+</style>
+
+<div class="formstatus_container">
+    <table>
+          
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Address</th>
+                <th>Qualification</th>
+                <th>Skills</th>
+                <th>Applied for</th>
+                <th>Resume</th>
+                <th>Action</th>
+
+            </tr>
+        </thead>
+
+        <tbody>
+            @foreach (var interns in Model)
+            {
+                <tr>
+                    <td>@interns.Id</td>
+                    <td>@interns.Name</td>
+                    <td>@interns.Email</td>
+                    <td>@interns.Phone</td>
+                    <td>@interns.Address</td>
+                    <td>@interns.Qualification</td>
+                    <td>@interns.Skills</td>
+                    <td>@interns.Appliedfor</td>
+                    <td><a href="@interns.Resumeurl" class="get_resume">Download</a></td>
+                    <td>
+
+                        <a class="edit_details" asp-controller="Admin"
+                           asp-action="EditForm" asp-route-id="@interns.Id">
+                            Edit Form
+
+                        </a>
+
+                        <a class="edit_details red_edit_details" asp-controller="Admin"
+                           asp-action="DeleteForm" asp-route-id="@interns.Id">
+                            Delete Form
+                        </a>
+                    </td>
+                </tr>
+
+            }
+
+
+        </tbody>
+
+    </table>
+
+</div>
+
+

@@ -1,0 +1,91 @@
+﻿@model EnrollModel
+
+<style>
+
+    form {
+        margin-bottom: 20vh;
+        margin-left: 3vw;
+    }
+
+    .delete_confirm_btn {
+        display: inline-block;
+        background-color: rgb(197, 21, 21);
+        color: #fff;
+        padding: 10px 15px;
+        text-decoration: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 14px;
+        border: none;
+        margin: 1vh 1vw;
+    }
+
+    .cancel_delete_btn {
+        background-color: rgb(136, 133, 133);
+    }
+
+
+
+    .delete_confirm_btn:hover {
+        background-color: rgb(236, 41, 41);
+    }
+
+    .cancel_delete_btn:hover {
+        background-color: rgb(177, 172, 172);
+    }
+
+    .delete_confirm_btn:focus {
+        outline: none;
+    }
+
+
+    .table {
+        width: 40%;
+        border-collapse: collapse;
+        margin-top: 20px;
+    }
+
+
+    th {
+        background-color: #f2f2f2;
+        padding: 10px;
+        text-align: left;
+        border: 1px solid #dddddd;
+    }
+
+
+    td {
+        border: 1px solid #dddddd;
+        padding: 10px;
+        background-color: #f9f9f9;
+    }
+
+</style>
+
+<h1>Delete Intern</h1>
+
+<table class="table">
+
+    <tr>
+        <th>Name</th>
+        <td>@Model.Name</td>
+
+    </tr>
+
+    <tr>
+        <th>Appliedfor</th>
+        <td>@Model.Appliedfor</td>
+
+    </tr>
+
+
+</table>
+
+<p>Are you sure you want to delete the intern with the following Application? </p>
+
+<form asp-action="DeleteConfirmedForm" asp-route-id="@Model.Id" method="post">
+    <input type="submit" value=" delete" class="delete_confirm_btn" />
+
+    <a asp-action="FormStatusbyId" class="cancel_delete_btn delete_confirm_btn"> Cancel  </a>
+
+</form>

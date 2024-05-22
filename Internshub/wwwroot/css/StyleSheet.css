@@ -70,6 +70,7 @@ body {
         padding: 6px 13px;
         border: none;
         border-radius: 5px;
+        
     }
 
     .internship_card p {
@@ -450,11 +451,9 @@ body {
     margin: auto;
 }
 
-
-
 .div_form_signup form {
     width: 70%;
-    margin: 15vh auto;
+    margin: 1vh auto;
 }
 
 .div_form_signup h1 {
@@ -467,7 +466,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: end;
-    gap: 3vh;
+    gap: 2vh;
     font-family: 'Inter', sans-serif;
     margin: auto;
 }
@@ -476,21 +475,39 @@ body {
     display: flex;
     flex-direction: column;
     gap: 1vh;
-    font-size: 1.4em;
+    font-size: 1.2em;
     width: 100%;
 }
 
     .fields input {
-        padding: 15px 20px;
-        width: 70%;
+        padding: 10px 20px;
+        width: 75%;
         border: none;
         border: none;
         border-radius: 8px;
         background-color: rgb(230, 224, 224);
     }
 
-.form_submit_div {
-    margin: 5vh 9vw;
+.already_user{
+    margin:auto;
+    font-size:1em;
+}
+    .already_user a {
+        color: black !important;
+        font-size: 1.2em;
+        text-decoration:none;
+    }
+    .already_user a:hover {
+        color: blue !important;
+    }
+
+.form_submit_div{
+    width:50%;
+    margin:15px 10px !important;
+}
+
+.form_submit_div button {
+    margin: auto 0px !important;
 }
 
     .form_submit_div button {
@@ -504,34 +521,49 @@ body {
 
 .photo_signup_page_grid_overall img {
     margin: 5vh auto;
+    object-fit:contain;
 }
 
 
 @media screen and (max-width:1200px) {
     .photo_signup_page_grid_overall img {
         width: 100%;
+
     }
 
     .div_form_signup form {
-        width: 80%;
+        width: 85%;
+    }
+    .fields {
+        font-size: 1.2em;
     }
 }
 
 @media screen and (max-width:1000px) {
+    .signup_page_grid_overall {
+        display: grid;
+        grid-template-columns: 2fr 3fr;
+        width: 90vw;
+        margin: auto;
+    }
 
     .div_form_signup form {
-        width: 80%;
+        width: 90%;
+    }
+    .fields {
+        font-size: 1em;
     }
 }
 
 @media screen and (max-width:700px) {
 
     .div_form_signup form {
-        width: 80%;
+        width: 90%;
     }
 
     .photo_signup_page_grid_overall img {
         width: 100%;
+        object-fit:contain;
     }
 }
 
@@ -545,10 +577,43 @@ body {
 
     .div_form_signup form {
         width: 80%;
+        margin:auto;
     }
 
     .photo_signup_page_grid_overall {
         display: none;
+    }
+}
+
+@media screen and (max-width:460px) {
+
+
+    .signup_page_grid_overall {
+        width: 85vw;
+    }
+    .div_form_signup form {
+        width: 90%;
+
+    }
+
+    .fields {
+        font-size: 0.8em;
+    }
+ 
+}
+
+@media screen and (max-width:360px) {
+
+
+    .signup_page_grid_overall {
+        width: 90vw;
+    }
+    .div_form_signup form {
+        width: 100%;
+    }
+
+    .fields {
+        font-size: 0.7em;
     }
 }
 
@@ -1277,8 +1342,6 @@ body {
 }
 
 
-
-
 .table {
     width: 40%;
     border-collapse: collapse;
@@ -1330,5 +1393,120 @@ td {
         border-radius: 5px;
         width: 55vw;
         margin: 2vh 0vh;
+    }
+}
+
+
+/*Enroll CSS*/
+
+.enroll_form {
+    width: 50vw;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid black;
+    border-radius: 15px;
+}
+
+.head_enroll {
+    text-align: center;
+    margin: 1vh 0px;
+}
+
+.enroll_fields {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: end;
+    font-family: 'Inter', sans-serif;
+    margin: auto;
+    gap: 2vh;
+}
+
+.fields_e {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.2em;
+    width: 100%;
+}
+
+    .fields_e input {
+        padding: 10px 20px;
+        width: 90%;
+        border: none;
+        border-radius: 6px;
+        background-color: rgb(231, 233, 229);
+    }
+
+    .fields_e textarea {
+        padding: 10px 20px;
+        width: 90%;
+        border: none;
+        border-radius: 6px;
+        background-color: rgb(231, 233, 229);
+    }
+
+    .fields_e select {
+        padding: 10px 20px;
+        width: 90%;
+        border: none;
+        border-radius: 6px;
+        background-color: rgb(231, 233, 229);
+    }
+
+.form_submit_div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px auto;
+}
+
+    .form_submit_div button {
+        color: white;
+        font-size: 1.2em;
+        background-color: #754FFE;
+        padding: 7px 16px;
+        border: none;
+        border-radius: 5px;
+    }
+
+
+    @media screen and (max-width:680px)
+    {
+
+        .enroll_form {
+            width: 80vw;
+        }
+
+
+        .enroll_fields {
+            width: 90%;
+        }
+
+        .fields_e {
+            font-size: 1em;
+        }
+
+        .form_submit_div button {
+            font-size: 1em;
+        }
+
+
+    }
+
+@media screen and (max-width:450px) {
+    .enroll_form {
+        width: 90vw;
+    }
+    .enroll_fields {
+        width: 95%;
+    }
+    .fields_e {
+        font-size: 0.8em;
+    }
+
+    .form_submit_div button {
+        font-size: 0.8em;
     }
 }

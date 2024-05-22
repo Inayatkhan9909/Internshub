@@ -4,9 +4,9 @@ namespace Internshub.Models
 {
     public class loginUser
     {
-        [Required]
+        [Required (ErrorMessage = "Username field is empty")]
         public string username { get; set; }
-        [Required]
+        [Required(ErrorMessage = "Password field is empty")]
         public string password { get; set; }
 
     }

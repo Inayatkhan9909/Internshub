@@ -2,6 +2,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Identity;
 using Internshub.Data;
 using Internshub.Models;
+using CloudinaryDotNet;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -15,12 +16,18 @@ builder.Services.AddDbContext<RegistrationDbContext>(options =>
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
 options.UseSqlServer(builder.Configuration.GetConnectionString("AuthDbConnection")));
 
+builder.Services.AddDbContext<EnrollDbContext>(options =>
+options.UseSqlServer(builder.Configuration.GetConnectionString("MainDbConnection")));
+
+builder.Services.AddDbContext<AddInternshipDbContext>(options =>
+options.UseSqlServer(builder.Configuration.GetConnectionString("MainDbConnection")));
+
 //builder.Services.AddIdentity<IdentityUser, IdentityRole>()
 //    .AddEntityFrameworkStores<AuthDbContext>()
 //    .AddDefaultTokenProviders();
 
 
-    builder.Services.AddIdentity<ApplicationUser, IdentityRole>()
+builder.Services.AddIdentity<ApplicationUser, IdentityRole>()
     .AddEntityFrameworkStores<ApplicationDbContext>()
     .AddDefaultTokenProviders();
 
@@ -32,7 +39,16 @@ options.UseSqlServer(builder.Configuration.GetConnectionString("AuthDbConnection
 //builder.Services.AddDbContext<AuthDbContext>(options =>
 //  options.UseSqlServer(builder.Configuration.GetConnectionString("AuthDbConnection")));
 
-var app = builder.Build();
+Account account = new Account(
+  "dogad6vvx",
+  "589848595814615",
+  "I2J3UdRH5EWPoDEC__GLimQSjE0");
+
+Cloudinary cloudinary = new Cloudinary(account);
+
+builder.Services.AddSingleton<Cloudinary>(cloudinary);
+
+var app = builder.Build(); 
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
